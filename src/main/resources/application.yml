@@ -1,0 +1,42 @@
+# Server settings
+server:
+    port:8080
+    address:localhost
+
+# SPRING PROFILES
+spring:
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+    druid:
+        name: findla
+        url: jdbc:mysql://192.168.0.200:3306/test?useUnicode=true&amp;charaterEncoding=utf-8
+        username: ztace
+        password: ztace
+        driverClassName: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+
+# MyBatis
+mybatis:
+    config: classpath:/mybatis-config.xml
+
+# LOGGING
+logging:
+    level:
+       com.ibatis:DEBUG
+       org.springframework.web:DEBUG
