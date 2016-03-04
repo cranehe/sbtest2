@@ -5,11 +5,17 @@ server:
 
 # SPRING PROFILES
 spring:
+    application:
+        name: sbtest
+    boot:
+        admin:
+          url: http://localhost:8090
     # HTTP ENCODING
     http:
         encoding.charset: UTF-8
         encoding.enable: true
         encoding.force: true
+    # Druid config
     druid:
         name: findla
         url: jdbc:mysql://192.168.0.200:3306/test?useUnicode=true&amp;charaterEncoding=utf-8
@@ -30,13 +36,6 @@ spring:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
 
-
 # MyBatis
 mybatis:
     config: classpath:/mybatis-config.xml
-
-# LOGGING
-logging:
-    level:
-       com.ibatis:DEBUG
-       org.springframework.web:DEBUG
