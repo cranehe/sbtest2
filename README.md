@@ -1,7 +1,7 @@
 # sbtest2
 
 ## it is a project about springboot with mybatis demo
-## This framework contans
+## This framework contains
 1. SpringBoot
 2. MyBatis
 3. Beetl
